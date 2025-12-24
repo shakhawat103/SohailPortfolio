@@ -270,3 +270,42 @@ html, body {
     .hero-visual { order: -1; }
     nav ul { display: none; } /* Mobile menu can be added later */
 }
+
+@media (max-width: 900px) {
+    header {
+        width: 100%;       /* Full width on mobile */
+        border-radius: 0;  /* Remove rounded corners */
+        margin: 0;         /* Remove top margin */
+        left: 0;           /* Reset left */
+        transform: none;   /* Disable the centering transform */
+        padding: 15px 5%;
+        border-left: none;
+        border-right: none;
+    }
+
+    /* If your nav links were hidden, this brings them back */
+    nav ul {
+        display: flex;     
+        gap: 15px;         /* Tighter gap for small screens */
+    }
+
+    nav ul li a {
+        font-size: 0.85rem; /* Smaller text for mobile */
+    }
+
+    /* Adjust main padding so content doesn't hide behind nav */
+    main {
+        padding-top: 80px !important;
+    }
+}
+
+/* Extra Small Screens (Phones) */
+@media (max-width: 480px) {
+    .logo {
+        font-size: 1rem;
+    }
+    
+    nav ul {
+        gap: 10px;
+    }
+}
