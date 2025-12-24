@@ -1,3 +1,21 @@
-// Example: highlight nav on scroll or animate text
-// Future improvements can include animations, form handlers, etc.
-console.log("Welcome to Jone Lee's Portfolio");
+window.addEventListener('scroll', function() {
+    const navbar = document.getElementById('navbar');
+    
+    // If user scrolls down more than 50px
+    if (window.scrollY > 50) {
+        navbar.classList.add('scrolled');
+    } else {
+        navbar.classList.remove('scrolled');
+    }
+});
+
+// Smooth scroll for internal links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+});
+
