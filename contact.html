@@ -47,14 +47,14 @@
                 </div>
             </div>
 
-            <form action="#" class="contact-form">
+            <form action="https://formspree.io/f/xpqzdqyr" class="contact-form" method="post">
                 <div class="form-row">
-                    <input type="text" placeholder="Name" required>
-                    <input type="email" placeholder="Email" required>
+                    <input type="text" name="name" placeholder="Name" required>
+                    <input type="email" name="_replyto" name="email" placeholder="Email" required>
                 </div>
-                <input type="text" placeholder="Subject">
+                <input type="text" name="subject" placeholder="Subject">
                 <textarea placeholder="Message" rows="5" required></textarea>
-                <button type="submit" class="btn-main">Send Message <i class="fas fa-paper-plane"></i></button>
+                <button type="submit" class="btn-main" value="Send" name="message">Send Message <i class="fas fa-paper-plane"></i></button>
             </form>
         </div>
     </main>
