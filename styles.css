@@ -242,6 +242,81 @@ html, body {
     padding: 100px 8%;
 }
 
+
+.tech-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Equal 3 columns */
+    gap: 25px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.tech-group {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid var(--border);
+    border-radius: 24px;
+    padding: 25px;
+    transition: 0.3s ease-in-out;
+}
+
+.tech-group:hover {
+    border-color: var(--primary);
+    background: rgba(255, 255, 255, 0.04);
+}
+
+.group-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 25px;
+    color: var(--primary);
+}
+
+.group-header i { font-size: 1.4rem; }
+.group-header h3 { font-size: 1.1rem; color: #fff; font-family: 'Syne', sans-serif; }
+
+.tech-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.tech-card-new {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 12px 18px;
+    background: var(--bg-dark);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    transition: 0.4s;
+}
+
+.tech-card-new img {
+    width: 30px;
+    height: 30px;
+    filter: grayscale(1);
+    transition: 0.3s;
+}
+
+.tech-card-new h4 { font-size: 0.95rem; margin: 0; }
+.tech-card-new span { font-size: 0.75rem; color: var(--text-gray); }
+
+/* Hover Animations */
+.tech-card-new:hover {
+    transform: translateX(10px);
+    border-color: var(--accent);
+    box-shadow: -5px 0 15px var(--accent);
+}
+
+.tech-card-new:hover img {
+    filter: grayscale(0);
+}
+
+/* Mobile Responsive */
+@media (max-width: 1024px) {
+    .tech-container { grid-template-columns: 1fr; }
+}
 /* Responsive adjustment */
 @media (max-width: 900px) {
     .resume-grid, .contact-wrapper {
