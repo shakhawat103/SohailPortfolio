@@ -313,6 +313,298 @@ html, body {
     filter: grayscale(0);
 }
 
+/* --- Education Timeline Section --- */
+.education {
+    max-width: 1100px;
+    margin: 80px auto;
+    padding: 0 20px;
+}
+
+.education-timeline {
+    position: relative;
+    max-width: 850px;
+    margin: 40px auto 0;
+    padding-left: 30px;
+    border-left: 2px solid rgba(255, 1, 79, 0.2); /* Soft crimson line */
+}
+
+.timeline-box {
+    position: relative;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    padding: 30px;
+    border-radius: 20px;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    backdrop-filter: blur(10px);
+}
+
+.timeline-badge {
+    position: absolute;
+    left: -46px;
+    top: 28px;
+    width: 30px;
+    height: 30px;
+    background: #ff014f; /* Primary accent */
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.85rem;
+    color: #fff;
+    box-shadow: 0 0 15px rgba(255, 1, 79, 0.6);
+}
+
+.timeline-date {
+    display: inline-block;
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: #ff014f;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.timeline-box h3 {
+    font-size: 1.3rem;
+    margin: 0 0 6px 0;
+    color: #fff;
+}
+
+.timeline-institution {
+    font-size: 1rem;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.7);
+    margin: 0 0 15px 0;
+    font-style: italic;
+}
+
+.timeline-box p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.6);
+    margin: 0;
+}
+
+/* --- Professional Experience Timeline --- */
+.experience {
+    padding: 80px 8%;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+.experience-timeline {
+    position: relative;
+    max-width: 1000px;
+    margin: 50px auto 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+/* Vertical guide line */
+.experience-timeline::before {
+    content: "";
+    position: absolute;
+    left: 280px;
+    top: 10px;
+    bottom: 10px;
+    width: 2px;
+    background: linear-gradient(to bottom, var(--primary), var(--border) 70%);
+}
+
+.exp-item {
+    display: grid;
+    grid-template-columns: 240px 1fr;
+    gap: 80px;
+    position: relative;
+}
+
+/* Timeline Node Indicator */
+.exp-item::after {
+    content: "";
+    position: absolute;
+    left: 281px;
+    top: 8px;
+    transform: translateX(-50%);
+    width: 12px;
+    height: 12px;
+    background: var(--bg-dark);
+    border: 3px solid var(--primary);
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(255, 1, 79, 0.6);
+    z-index: 2;
+    transition: background 0.3s ease;
+}
+
+.exp-item:hover::after {
+    background: var(--primary);
+}
+
+/* Left Metadata Column */
+.exp-meta {
+    text-align: right;
+    padding-top: 4px;
+}
+
+.exp-date {
+    display: inline-block;
+    font-size: 0.85rem;
+    font-weight: 800;
+    color: var(--primary);
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+}
+
+.exp-company {
+    font-family: 'Syne', sans-serif;
+    color: #fff;
+    font-size: 1.05rem;
+    font-weight: 700;
+    margin-bottom: 4px;
+}
+
+.exp-company i {
+    font-size: 0.9rem;
+    color: var(--text-gray);
+    margin-right: 4px;
+}
+
+.exp-location {
+    font-size: 0.8rem;
+    color: var(--text-gray);
+}
+
+/* Right Content Main Block */
+.exp-content {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    padding: 35px;
+    border-radius: 24px;
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    backdrop-filter: blur(10px);
+}
+
+.exp-content h3 {
+    font-family: 'Syne', sans-serif;
+    font-size: 1.3rem;
+    color: #fff;
+    margin-bottom: 15px;
+}
+
+.exp-summary {
+    font-size: 0.95rem;
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 25px;
+    line-height: 1.7;
+}
+
+/* Detailed Contribution Lists */
+.exp-bullet-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.exp-bullet-list li {
+    font-size: 0.9rem;
+    color: var(--text-gray);
+    line-height: 1.6;
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+.exp-bullet-list li i {
+    color: var(--primary);
+    font-size: 0.95rem;
+    margin-top: 4px;
+    flex-shrink: 0;
+}
+
+.exp-bullet-list li strong {
+    color: #fff;
+    font-weight: 600;
+}
+
+/* Framework Badges */
+.exp-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.exp-tags span {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid var(--border);
+    padding: 5px 12px;
+    border-radius: 8px;
+    font-size: 0.75rem;
+    color: var(--text-gray);
+    font-weight: 600;
+}
+
+/* Interaction Effects */
+.exp-content:hover {
+    transform: translateX(10px);
+    border-color: rgba(255, 1, 79, 0.3);
+    background: rgba(255, 255, 255, 0.04);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+/* --- Responsive Experience Timeline --- */
+@media (max-width: 900px) {
+    .experience-timeline::before {
+        left: 20px;
+    }
+    .exp-item {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding-left: 45px;
+    }
+    .exp-item::after {
+        left: 21px;
+        top: 6px;
+    }
+    .exp-meta {
+        text-align: left;
+    }
+    .exp-content {
+        padding: 25px;
+    }
+    .exp-content:hover {
+        transform: translateY(-5px); /* Swaps side-shift to clean lift on screens */
+    }
+}
+
+/* Hover Micro-interaction */
+.timeline-box:hover {
+    transform: translateX(10px);
+    border-color: rgba(255, 1, 79, 0.4);
+    background: rgba(255, 255, 255, 0.04);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* Mobile Adjustments */
+@media (max-width: 768px) {
+    .education-timeline {
+        padding-left: 20px;
+    }
+    .timeline-badge {
+        left: -36px;
+        width: 26px;
+        height: 26px;
+        font-size: 0.75rem;
+    }
+    .timeline-box {
+        padding: 20px;
+    }
+    .timeline-box h3 {
+        font-size: 1.1rem;
+    }
+}
+
 /* Mobile Responsive */
 @media (max-width: 1024px) {
     .tech-container { grid-template-columns: 1fr; }
